@@ -27,7 +27,8 @@ var SLIDE_CONFIG = {
     gplus: 'http://racic.ch/+',
     //twitter: '@rac2030',
     www: 'http://gdgzh.ch',
-    github: 'http://github.com/rac2030'
+    github: 'http://github.com/rac2030',
+    slideurl: 'http://s.2030.tk/popt'
   }/*, {
     name: 'Second Name',
     company: 'Job Title, Google',

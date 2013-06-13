@@ -343,20 +343,23 @@ SlideDeck.prototype.loadConfig_ = function(config) {
       }
       html = presenterTitle.join(' - ') + '<br>';
 
-      var gplus = p.gplus ? '<span>g+</span><a href="' + p.gplus +
+      var gplus = p.gplus ? '<span><img src="images/icons/gplus.png"></span><a href="' + p.gplus +
           '">' + p.gplus.replace(/https?:\/\//, '') + '</a>' : '';
 
       var twitter = p.twitter ? '<span>twitter</span>' +
           '<a href="http://twitter.com/' + p.twitter + '">' +
           p.twitter + '</a>' : '';
 
-      var www = p.www ? '<span>www</span><a href="' + p.www +
+      var www = p.www ? '<span><img src="images/icons/web.png" height="32px"></span><a href="' + p.www +
                         '">' + p.www.replace(/https?:\/\//, '') + '</a>' : '';
 
-      var github = p.github ? '<span>github</span><a href="' + p.github +
+      var github = p.github ? '<span><img src="images/icons/github.png" height="32px"></span><a href="' + p.github +
           '">' + p.github.replace(/https?:\/\//, '') + '</a>' : '';
 
-      var html2 = [gplus, twitter, www, github].join('<br>');
+      var slideurl = p.slideurl ? '<span><img src="images/icons/slides.png" height="32px"></span><a href="' + p.slideurl +
+                        '">' + p.slideurl.replace(/https?:\/\//, '') + '</a>' : '';
+
+      var html2 = [gplus, /** twitter, **/ www, github, slideurl].join('<br>');
 
       if (dataConfigContact) {
         dataConfigContact.innerHTML = html2;
