@@ -1,0 +1,58 @@
+﻿<!--
+  ~ Copyleft (c) 2013. This code is for learning purposes only. Do whatever you like with it but don't take it as perfect code.
+  ~ This code lab has been developed by Michel Racic (http://rac.su/+) and funded partially by Credit Suisse AG (http://www.credit-suisse.ch) and GDG Zürich (http://www.gdgzh.ch).
+  -->
+
+<!doctype html>
+<html>
+<head>
+<title>Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--<meta name="viewport" content="width=100%">-->
+<link rel="stylesheet" href="styles.css" />
+    <style type="text/css">
+ <!-- BODY {background:none transparent;}-->
+ </style>
+</head>
+<body onkeypress="javascript:keypress(event);">
+
+<div class="calculator blackgradient largeshadow" style="display: inline-block;">
+    <div id="result" class="display graygradient smallshadow">0</div>
+    <div class="row">
+        <div id="calculator-button-ac" class="button smallshadow" onmousedown="javascript:allclear();"><div class="button-label">AC</div></div>
+        <div id="calculator-button-ce" class="button smallshadow" onmousedown="javascript:clearentry();"><div class="button-label">CE</div></div>
+        <div id="calculator-button-backspace" class="button smallshadow" onmousedown="javascript:backspace();"><div class="button-label">BS</div></div>
+        <div id="calculator-button-÷" class="button blue smallshadow last" onmousedown="javascript:divide();"><div class="button-symbol">÷</div></div>
+    </div>
+    <div class="row">
+        <div id="calculator-button-7" class="button smallshadow" onmousedown="javascript:seven();"><div class="button-label">7</div></div>
+        <div id="calculator-button-8" class="button smallshadow" onmousedown="javascript:eight();"><div class="button-label">8</div></div>
+        <div id="calculator-button-9" class="button smallshadow" onmousedown="javascript:nine();"><div class="button-label">9</div></div>
+        <div id="calculator-button-x" class="button blue smallshadow raise last" onmousedown="javascript:multiply();"><div class="button-symbol">×</div></div>
+    </div>
+    <div class="row">
+        <div id="calculator-button-4" class="button smallshadow" onmousedown="javascript:four();"><div class="button-label">4</div></div>
+        <div id="calculator-button-5" class="button smallshadow" onmousedown="javascript:five();"><div class="button-label">5</div></div>
+        <div id="calculator-button-6" class="button smallshadow" onmousedown="javascript:six();"><div class="button-label">6</div></div>
+        <div id="calculator-button--" class="button blue smallshadow raise last" onmousedown="javascript:subtract();"><div class="button-symbol">-</div></div>
+    </div>
+    <div class="row">
+        <div id="calculator-button-1" class="button smallshadow" onmousedown="javascript:one();"><div class="button-label">1</div></div>
+        <div id="calculator-button-2" class="button smallshadow" onmousedown="javascript:two();"><div class="button-label">2</div></div>
+        <div id="calculator-button-3" class="button smallshadow" onmousedown="javascript:three();"><div class="button-label">3</div></div>
+        <div id="calculator-button-+" class="button blue smallshadow raise last" onmousedown="javascript:add();"><div class="button-symbol">+</div></div>
+    </div>
+    <div class="row">
+        <div id="calculator-button-0" class="button smallshadow" onmousedown="javascript:zero();"><div class="button-label">0</div></div>
+        <div id="calculator-button-." class="button smallshadow" onmousedown="javascript:decimal();"><div class="button-label">.</div></div>
+        <div id="calculator-button-%"class="button blue smallshadow" onmousedown="javascript:percent();"><div class="button-label">%</div></div>
+        <div id="calculator-button-=" class="button blue smallshadow raise last" onmousedown="javascript:equals();"><div class="button-symbol">=</div></div>
+    </div>
+</div>
+  
+<div style="display: none;" id="tape" class="tape"></div>
+
+<script src="default.js" ></script>
+
+</body>
+</html>
