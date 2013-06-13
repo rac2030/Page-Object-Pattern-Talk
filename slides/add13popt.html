@@ -1,0 +1,528 @@
+<!--
+
+GDG[x] Glider based on
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="logoslide nobackground">
+    <aside class="note">
+      <section>
+        <a href="?presentme=true" target="_self">?presentme=true</a>
+      </section>
+    </aside>
+    <article class="flexbox vcenter">
+      <span><img src="images/gdg_logo.png"></span>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="note">
+      <section>
+        <a href="?presentme=true" target="_self">?presentme=true</a>
+      </section>
+    </aside>
+    <aside class="gdbar"><img src="images/gdg_icon_128.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Used for testing Web-GUIs</li>
+          <li>Not intended for Backend testing but can be used in combination</li>
+          <li>Widely adopted by the industry and backed from big players</li>
+          <li>Allows Cross browser testing, more on this in the next slides</li>
+        </ul>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>Sele... what?</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/popt/selenium.png" alt="Selenium" title="Selenium" height="100%">
+      <footer class="source">source: Wikipedia and seleniumhq.org</footer>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="note">
+      <section>
+        <p>Todays topics</p>
+        <ul>
+          <li>I won't explain why automated regression testing is important or how to get to your tests as this would covers a couple more hours of talking.</li>
+          <li>Today, we will have a look at Selenium WebDriver which is not a tool itself but rather a library hiding a lot of boilerplate to you.</li>
+          <li>You can use your prefered Framework for driving the tests like TestNG, JUnit or whatever you prefer.</li>
+          <li>TODO: not only test automation but also general automation possible</li>
+        </ul>
+      </section>
+    </aside>
+    <aside class="gdbar"><img src="images/gdg_icon_128.png"></aside>
+    <article class="flexbox vcenter">
+      <img src="images/popt/comics/automationcomic.png" alt="Why automation" title="Why automation" height="100%">
+      <footer class="source">source: www.leonardscomic.com</footer>
+    </article>
+  </slide>
+
+  <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>One of the biggest benefits of Selenium is its cross browser testing ability</li>
+          <li>You can run the same test against multiple browsers like Chrome, Safari, Firefox, Internet Explorer, Opera, ...</li>
+        </ul>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>X-Browser testing</h2>
+    </hgroup>
+      <articel class="flexbox vcenter">
+        <div class="centered">
+          <img src="images/popt/browsers/chrome.png" alt="Google Chrome" title="Google Chrome" height="200px">
+          <img src="images/popt/browsers/firefox.png" alt="Firefox" title="Firefox" height="200px">
+        </div>
+        <div class="centered">
+          <img src="images/popt/browsers/safari.png" alt="Apple Safari" title="Apple Safari" height="200px">
+          <img src="images/popt/browsers/opera.png" alt="Opera" title="Opera" height="200px">
+          <img src="images/popt/browsers/ie.png" alt="Microsoft Internet Explorer" title="Microsoft Internet Explorer" height="200px">        
+        </div>
+    </articel>
+  </slide>
+
+  <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Yes even cross platform, Linux, OSX, Windows no problem for selenium.</li>
+          <li>What about Mobile phones or tablets? Yes it also works for Android and iOS</li>
+          <li>All you need is the corresponding drivers and selenium splits your test code from the specific implementations</li>
+        </ul>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>X-OS testing</h2>
+    </hgroup>
+      <articel class="flexbox vcenter">
+      <div class="centered">
+        <img src="images/popt/os/linux.png" alt="Linux" title="Linux" height="180px">&nbsp;&nbsp;
+        <img src="images/popt/os/osx.png" alt="Apple OSX" title="Apple OSX" height="180px">&nbsp;&nbsp;
+        <img src="images/popt/os/windows.png" alt="Microsoft Windows" title="Microsoft Windows" height="180px">
+      </div>
+      <br/><br/>
+      <div class="centered">
+        <img src="images/popt/os/android.png" alt="Android" title="Android" height="180px">&nbsp;&nbsp;
+        <img src="images/popt/os/ios.png" alt="Apple iOS" title="Apple iOS" height="180px">
+      </div>
+    </articel>
+  </slide>
+
+  <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Abstracting the view from the code</li>
+          <li>Mapping real world objects and actions to classes and fields</li>
+          <li>Create functions from the actions that can be done on this object</li>
+        </ul>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>What do we want to achieve?</h2>
+    </hgroup>
+    <image style="float: right; position:absolute; top: 20px; right: 50px; -webkit-transform: rotate(0deg);" src="images/popt/strategy.jpg" alt="Strategy" width="12%">
+    <article class="flexbox vcenter">
+      <pre class="prettyprint" data-lang="java">
+        <img style="float: right; position:relative; top: 30px; right: 200px;" src="images/popt/screens/calculator2.png" alt="Calculator Demo" title="Calculator Demo" width="25%">
+public interface ICalcPage {
+    public double displayed();
+    public ICalcPage clear();
+    public ICalcPage divide();
+    public ICalcPage multiply();
+    public ICalcPage add();
+    public ICalcPage substract();
+    public double equal();
+    public ICalcPage dot();
+    public ICalcPage n0();
+    public ICalcPage n1();
+    ...
+}
+      </pre>
+    </article>
+  </slide>
+
+  <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>TODO</li>
+        </ul>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>Developement vs. Testing</h2>
+    </hgroup>
+    <article class="vcenter">
+      <center><img src="images/popt/dev_vs_test.png" alt="Developement vs. Testing" title="Developement vs. Testing" height="100%"></center>
+      <footer class="source">source: My Page Object Pattern code lab from last year (http://goo.gl/uE52d)</footer>
+    </article>
+  </slide>
+  
+  <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>TODO</li>
+        </ul>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>Management conclusion</h2>
+    </hgroup>
+    <article class="vcenter">
+      <img src="images/popt/pop_conclusion.png" alt="Management conclusion" title="Management conclusion" width="100%">
+      <footer class="source">source: My Page Object Pattern code lab from last year (http://goo.gl/uE52d)</footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>The demo application</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/popt/screens/calcannotated_0.png" alt="Calculator Demo" title="Calculator Demo" width="100%">
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>The demo application</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/popt/screens/calcannotated_1.png" alt="Calculator Demo" title="Calculator Demo" width="100%">
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>The demo application</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/popt/screens/calcannotated_2.png" alt="Calculator Demo" title="Calculator Demo" width="100%">
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>The demo application</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/popt/screens/calcannotated_3.png" alt="Calculator Demo" title="Calculator Demo" width="100%">
+    </article>
+  </slide>
+
+  <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>TODO</li>
+        </ul>
+        <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
+      </section>
+    </aside>   
+    <hgroup>
+      <h2>The Interface</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="java">
+package ch.racic.selenium.poptalk.calc;
+
+public <b>interface</b> ICalcPage {
+    public double displayed();        // This is the Display we see and we get it as a double.
+    public ICalcPage clear();         // Define all the function buttons.
+    public ICalcPage clearEntry();    
+    public ICalcPage backspace();     
+    public ICalcPage percent();       // I usually return itself as I'm lazy and the dot notation
+    public ICalcPage divide();        // looks pretty cool when reading the code.
+    public ICalcPage multiply();      
+    public ICalcPage add();
+    public ICalcPage substract();
+    public double equal();            // On most tests we would need the displayed result anyway
+    public ICalcPage dot();           // Let's just return it and save as some strokes.
+    public ICalcPage n0();
+    public ICalcPage n1();
+    public ICalcPage n2();
+    public ICalcPage n3();
+    public ICalcPage n4();
+    public ICalcPage n5();
+    public ICalcPage n6();
+    public ICalcPage n7();
+    public ICalcPage n8();
+    public ICalcPage n9();
+}</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>TODO</li>
+        </ul>
+        <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>The Tests</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="java">
+    @Test(testName = "Invoke", groups = {"init"})
+    public void targetServerReady() {
+        Assert.assertTrue("Page title is 'Calculator'?", driver.getTitle().equals("Calculator"));
+    }</pre>
+      <pre class="prettyprint" data-lang="java">
+    @Test(testName = "Reset", groups = {"init"}, dependsOnMethods = {"targetServerReady"})
+    public void reset() {
+        Assert.assertTrue("Starts with 0?", calc.displayed() == 0);
+        <b>Assert.assertTrue("Display changed to 5?", calc.n5().displayed() == 5);</b>
+        Assert.assertTrue("Display resets to 0?", calc.clear().displayed() == 0);
+    }</pre>
+      <pre class="prettyprint" data-lang="java">
+    @Test(testName = "Add numbers", groups = {"Operations"}, dependsOnGroups = {"init"})
+    public void additions() {
+        Assert.assertTrue("1+1=2", <b>calc.clear().n1().add().n1().equal() == 2</b>);
+        Assert.assertTrue("4+5=9", calc.clear().n4().add().n5().equal() == 9);
+        Assert.assertTrue("20+3=23", calc.clear().n2().n0().add().n3().equal() == 23);
+        Assert.assertTrue("501+345=846", calc.clear().n5().n0().n1().add().n3().n4().n5().equal() == 846);
+    }</pre>
+    <footer class="source">source: https://github.com/rac2030/Page-Object-Pattern-Talk</footer>
+    </article>
+  </slide>
+
+ <slide>
+  <aside class="note">
+      <section>
+        <ul>
+          <li>TODO</li>
+        </ul>
+        <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>Some Selenium boilerplate for my test</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="java">
+    @BeforeSuite
+    public void suiteSetUp() throws IOException {
+        testconfig = new POConfig();
+        // Initialize driver we want to use
+        String browserToUse = testconfig.getProperty("browserToUse");
+        if(browserToUse.equals("HTMLUNIT")) {
+            driver = new HtmlUnitDriver(true);
+        } else if(browserToUse.equals("FIREFOX")) {
+            FirefoxProfile ffprofile = new FirefoxProfile();
+            ffprofile.setPreference("intl.accept_languages", "en-us,en");
+            driver = new FirefoxDriver(ffprofile);
+        } else if(browserToUse.equals("CHROME")) {
+            System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+            driver = new ChromeDriver();
+        } else if(browserToUse.equals("SAFARI")) {
+            driver = new SafariDriver();
+        } else if(browserToUse.equals("ANDROID")) {
+            <b>driver = new AndroidDriver();</b>
+        }
+        // load the calculator page
+        driver.navigate().to(testconfig.getProperty("targetURL"));
+        // initialize our page object, we do it here as its a single page application
+        <b>calc = getPageObject(ICalcPage.class);</b>
+    }</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>TODO</li>
+        </ul>
+        <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>Look at the application source</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="html">
+&lt;div <b>id="result"</b> class="display graygradient smallshadow"&gt;0&lt;&#47;div&gt;
+&lt;div class="row"&gt;
+  &lt;div <b>id="calculator-button-ac"</b> onmousedown="javascript:allclear();"&gt;&lt;div&gt;AC&lt;&#47;div&gt;&lt;&#47;div&gt;
+  &lt;div <b>id="calculator-button-ce"</b> onmousedown="javascript:clearentry();"&gt;&lt;div&gt;CE&lt;&#47;div&gt;&lt;&#47;div&gt;
+  &lt;div <b>id="calculator-button-backspace"</b> onmousedown="javascript:backspace();"&gt;&lt;div&gt;BS&lt;&#47;div&gt;&lt;&#47;div&gt;
+  &lt;div <b>id="calculator-button-÷"</b> onmousedown="javascript:divide();"&gt;&lt;div&gt;÷&lt;&#47;div&gt;&lt;&#47;div&gt;
+&lt;&#47;div&gt;
+</pre>
+
+    <p>The use of the HTML-ID attribute makes it quite easy for us to automate this application.</p>
+    <ul>
+      <li>Even if there are no id's, we can use css, class, ... attributes<li>
+      <li>If nothing else helps, XPath to the rescue</li>
+    </ul>
+    <footer class="source">source: modified version of http://davidpallmann.blogspot.ch/2012/09/html5-calculator-with-tape.html</footer>
+    </article>
+  </slide>
+
+  <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>TODO</li>
+        </ul>
+        <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>The Page Object Implementation</h2>
+      <h3>Define the fields we need</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="java">
+public <b>class CalcPage implements ICalcPage</b>{
+
+    @FindBy(id = "result")
+    private WebElement display;
+
+    <b>@FindBy(id="calculator-button-ac")
+    private WebElement clear;</b>
+
+    @FindBy(id="calculator-button-ce")
+    private WebElement clearEntry;
+
+    @FindBy(id="calculator-button-backspace")
+    private WebElement backspace;
+
+    @FindBy(id="calculator-button-%")
+    private WebElement percent;
+
+    ...
+  }</pre>
+    <footer class="source">source: https://github.com/rac2030/Page-Object-Pattern-Talk</footer>
+    </article>
+  </slide>
+
+  <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>TODO</li>
+        </ul>
+        <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>The Page Object Implementation</h2>
+      <h3>Implement the action functions</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="java">
+public class CalcPage implements ICalcPage{
+    ...
+    public double displayed() {
+        return Double.valueOf(display.getText());
+    }
+
+    public ICalcPage clear() {
+        clear.click();
+        return this;
+    }
+
+    <b>public double equal() {
+        equal.click();
+        return Double.valueOf(display.getText());
+    }</b>
+    ...
+  }</pre>
+    <footer class="source">source: https://github.com/rac2030/Page-Object-Pattern-Talk</footer>
+    </article>
+  </slide>
+
+  <slide class="dark nobackground">
+    <article class="flexbox vcenter">
+      <span><video id="desktop.demo" src="videos/desktop_demo.m4v" width="100%" preload controls muted></video></span>
+    </article>
+  </slide>
+
+  <slide class="dark nobackground">
+    <article class="flexbox vcenter">
+      <span><video id="android.demo" src="videos/android_demo.m4v" width="100%" preload controls muted></video></span>
+    </article>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/gdg_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+      <p>You can find the source and this presentation @
+        <br/>
+        https://github.com/rac2030/Page-Object-Pattern-Talk
+      </p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="logoslide dark nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/gdg_logo_white.png"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!--script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script-->
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

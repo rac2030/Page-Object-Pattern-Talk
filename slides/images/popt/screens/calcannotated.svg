@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1513.5872"
+   height="629"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="calcannotated.svg"
+   inkscape:export-filename="/Users/rac/IdeaProjects/PageObjectPatternTalkDemo/slides/images/popt/screens/calcannotated_3.png"
+   inkscape:export-xdpi="50"
+   inkscape:export-ydpi="50">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path3914"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="736.77488"
+     inkscape:cy="526.47435"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer3"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1440"
+     inkscape:window-height="788"
+     inkscape:window-x="0"
+     inkscape:window-y="22"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-22.142883,-183.57646)">
+    <image
+       y="183.57646"
+       x="22.142883"
+       id="image3079"
+       xlink:href="file:///Users/rac/IdeaProjects/PageObjectPatternTalkDemo/slides/images/popt/screens/calculator2.png"
+       height="629"
+       width="430" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="display"
+     style="display:inline">
+    <rect
+       transform="translate(-22.142883,-183.57646)"
+       style="opacity:0.54741378;fill:none;stroke:#ff0000;stroke-width:3.82970858;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3850"
+       width="365.09045"
+       height="34.98468"
+       x="48.23386"
+       y="210.51907" />
+    <text
+       transform="translate(-22.142883,-183.57646)"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="565.68549"
+       y="266.4635"
+       id="text3898"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3900"
+         x="565.68549"
+         y="266.4635">Read only, lets have a function called displayed</tspan></text>
+    <path
+       transform="translate(-22.142883,-183.57646)"
+       style="opacity:0.547;fill:none;stroke:#ff0000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m 270.84344,209.30323 c 93.64889,-37.86744 184.29806,-31.74181 272.61863,36.95722"
+       id="path3906"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="buttons"
+     style="display:inline">
+    <rect
+       transform="translate(-22.142883,-183.57646)"
+       style="opacity:0.54741378;fill:none;stroke:#ff0000;stroke-width:6.46621656;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3896"
+       width="386.43237"
+       height="299.5592"
+       x="40.129055"
+       y="266.18646"
+       ry="0" />
+    <text
+       transform="translate(-22.142883,-183.57646)"
+       sodipodi:linespacing="125%"
+       id="text4557"
+       y="678.4635"
+       x="565.68549"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="678.4635"
+         x="565.68549"
+         id="tspan4559"
+         sodipodi:role="line">Buttons, they produce actions when pressed</tspan></text>
+    <path
+       transform="translate(-22.142883,-183.57646)"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4572"
+       d="m 230.84344,569.14664 c -6.74139,71.91011 168.50678,141.5698 306.90434,107.3285"
+       style="opacity:0.547;fill:none;stroke:#ff0000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Lend)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="equals"
+     style="display:inline">
+    <path
+       transform="translate(-22.142883,-183.57646)"
+       sodipodi:nodetypes="csc"
+       inkscape:connector-curvature="0"
+       id="path4574"
+       d="m 397.9863,527.87466 c 43.38323,23.58194 30.27495,-47.15183 76.47796,-41.17942 44.56595,5.7608 37.06255,-7.02193 98.99781,-26.14907"
+       style="opacity:0.547;fill:none;stroke:#ff0000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Lend);display:inline" />
+    <text
+       transform="translate(-22.142883,-183.57646)"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="588.5426"
+       y="454.1778"
+       id="text4576"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4578"
+         x="588.5426"
+         y="454.1778">Special button, lets give back the displayed</tspan><tspan
+         sodipodi:role="line"
+         x="588.5426"
+         y="504.1778"
+         id="tspan4591">result after a press as we probably need it then</tspan></text>
+  </g>
+</svg>
