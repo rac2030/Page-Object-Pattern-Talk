@@ -77,12 +77,11 @@ URL: https://code.google.com/p/io-2012-slides
   <slide class="segue dark nobackground">
     <aside class="note">
       <section>
-        <p>Todays topics</p>
         <ul>
           <li>I won't explain why automated regression testing is important or how to get to your tests as this would covers a couple more hours of talking.</li>
           <li>Today, we will have a look at Selenium WebDriver which is not a tool itself but rather a library hiding a lot of boilerplate to you.</li>
           <li>You can use your prefered Framework for driving the tests like TestNG, JUnit or whatever you prefer.</li>
-          <li>TODO: not only test automation but also general automation possible</li>
+          <li>Not only test automation but also general automation of workflows is possible</li>
         </ul>
       </section>
     </aside>
@@ -124,7 +123,7 @@ URL: https://code.google.com/p/io-2012-slides
         <ul>
           <li>Yes even cross platform, Linux, OSX, Windows no problem for selenium.</li>
           <li>What about Mobile phones or tablets? Yes it also works for Android and iOS</li>
-          <li>All you need is the corresponding drivers and selenium splits your test code from the specific implementations</li>
+          <li>All you need is the corresponding drivers and selenium hides the specific implementations from your testcode</li>
         </ul>
       </section>
     </aside>
@@ -149,9 +148,9 @@ URL: https://code.google.com/p/io-2012-slides
     <aside class="note">
       <section>
         <ul>
-          <li>Abstracting the view from the code</li>
-          <li>Mapping real world objects and actions to classes and fields</li>
-          <li>Create functions from the actions that can be done on this object</li>
+          <li>Simplify the tests by abstracting the view from the code</li>
+          <li>Reduce maintenance with mapping real world objects to classes and fields</li>
+          <li>Create functions from the actions that can be done on this objects</li>
         </ul>
       </section>
     </aside>
@@ -183,7 +182,10 @@ public interface ICalcPage {
     <aside class="note">
       <section>
         <ul>
-          <li>TODO</li>
+          <li>Everyone needs requirements, in one way or the other.</li>
+          <li>From the requirements, a developer implements the application while a tester should write his tests based on it.</li>
+          <li>Having the interface based on requirements lets us write tests before we actually mplemented the application</li>
+          <li>TODO</li> 
         </ul>
       </section>
     </aside>
@@ -200,7 +202,9 @@ public interface ICalcPage {
     <aside class="note">
       <section>
         <ul>
-          <li>TODO</li>
+          <li>Testing team needs to do less maintenance, gets involved early and can reuse artifacts from developement.</li>
+          <li>Developers get a more stable staging quality, can improve requirements quality and reuse artifacts from testing.</li>
+          <li>For the Project, the overall quality will be improved and they get clearer requirements as well as a stable solution for long term use.</li>
         </ul>
       </section>
     </aside>
@@ -214,6 +218,13 @@ public interface ICalcPage {
   </slide>
 
   <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>What are the basic elements in a calculator if you just look at it?</li>
+        </ul>
+      </section>
+    </aside> 
     <hgroup>
       <h2>The demo application</h2>
     </hgroup>
@@ -222,6 +233,14 @@ public interface ICalcPage {
     </article>
   </slide>
   <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>We have a display, if we look at it we can see a number but we are not able to directly interact with it.</li>
+          <li>Lets make a function called <b>displayed</b> which will do the same as when we look on the display of a physical calculator</li>
+        </ul>
+      </section>
+    </aside>
     <hgroup>
       <h2>The demo application</h2>
     </hgroup>
@@ -230,6 +249,16 @@ public interface ICalcPage {
     </article>
   </slide>
   <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>We have a lot of buttons</li>
+          <li>We have buttons for each number and for each operation as well as some basic like clear screen</li>
+          <li>Whenever we press a button, something internally gets triggered and it may even change the read only display.</li>
+          <li>Lets have also functions for the action keypress.</li>
+        </ul>
+      </section>
+    </aside>
     <hgroup>
       <h2>The demo application</h2>
     </hgroup>
@@ -238,6 +267,13 @@ public interface ICalcPage {
     </article>
   </slide>
   <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>But hey, there is a button where we expect most of the time that we have to look up and read the result from the display so this could be a special function that will return the displayed value.</li>
+        </ul>
+      </section>
+    </aside>
     <hgroup>
       <h2>The demo application</h2>
     </hgroup>
@@ -250,7 +286,9 @@ public interface ICalcPage {
     <aside class="note">
       <section>
         <ul>
-          <li>TODO</li>
+          <li>We have nbow some requirements and with tha, we can design an interface.</li>
+          <li>We can define the display function which returns us a double value.</li>
+          <li>Returning itself is something which I do because for testcases, I like them readable and with a dot notation you can write nice one liners.</li>
         </ul>
         <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
       </section>
@@ -292,7 +330,9 @@ public <b>interface</b> ICalcPage {
     <aside class="note">
       <section>
         <ul>
-          <li>TODO</li>
+          <li>Having the interfaces allows us to actually already implement the test cases.</li>
+          <li>In the source on github, you can lookup my helper class and the config file I use.</li>
+          
         </ul>
         <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
       </section>
@@ -473,12 +513,26 @@ public class CalcPage implements ICalcPage{
   </slide>
 
   <slide class="dark nobackground">
+    <aside class="note">
+      <section>
+        <ul>
+          <li>TODO</li>
+        </ul>
+      </section>
+    </aside>
     <article class="flexbox vcenter">
       <span><video id="desktop.demo" src="videos/desktop_demo.m4v" width="100%" preload controls muted></video></span>
     </article>
   </slide>
 
   <slide class="dark nobackground">
+    <aside class="note">
+      <section>
+        <ul>
+          <li>TODO</li>
+        </ul>
+      </section>
+    </aside>
     <article class="flexbox vcenter">
       <span><video id="android.demo" src="videos/android_demo.m4v" width="100%" preload controls muted></video></span>
     </article>
