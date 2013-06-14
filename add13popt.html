@@ -54,6 +54,10 @@ URL: https://code.google.com/p/io-2012-slides
     </hgroup>
   </slide>
 
+  <slide class="fill nobackground" style="background-image: url(images/aboutme/gdgabout2.png)">
+     
+  </slide>
+
   <slide>
     <aside class="note">
       <section>
@@ -98,6 +102,7 @@ URL: https://code.google.com/p/io-2012-slides
         <ul>
           <li>One of the biggest benefits of Selenium is its cross browser testing ability</li>
           <li>You can run the same test against multiple browsers like Chrome, Safari, Firefox, Internet Explorer, Opera, ...</li>
+          <li>You can also use it on headless browsers like HTMLUnit or PhantomJS which is good for doing unit tests</n>
         </ul>
       </section>
     </aside>
@@ -121,7 +126,8 @@ URL: https://code.google.com/p/io-2012-slides
     <aside class="note">
       <section>
         <ul>
-          <li>Yes even cross platform, Linux, OSX, Windows no problem for selenium.</li>
+          <li>Yes even cross platform.</li>
+          <li>Linux, OSX, Windows... no problem for selenium.</li>
           <li>What about Mobile phones or tablets? Yes it also works for Android and iOS</li>
           <li>All you need is the corresponding drivers and selenium hides the specific implementations from your testcode</li>
         </ul>
@@ -150,7 +156,7 @@ URL: https://code.google.com/p/io-2012-slides
         <ul>
           <li>Simplify the tests by abstracting the view from the code</li>
           <li>Reduce maintenance with mapping real world objects to classes and fields</li>
-          <li>Create functions from the actions that can be done on this objects</li>
+          <li>Create functions from the actions that can be done on those objects</li>
         </ul>
       </section>
     </aside>
@@ -183,9 +189,9 @@ public interface ICalcPage {
       <section>
         <ul>
           <li>Everyone needs requirements, in one way or the other.</li>
-          <li>From the requirements, a developer implements the application while a tester should write his tests based on it.</li>
-          <li>Having the interface based on requirements lets us write tests before we actually mplemented the application</li>
-          <li>TODO</li> 
+          <li>From the requirements, a developer implements the application while a tester writes his tests based on them.</li>
+          <li>Having the interface based on requirements lets us write tests before we actually implemented the application</li>
+          <li>This allows us to build a regression suite while develelopement is still in progress.</li>
         </ul>
       </section>
     </aside>
@@ -255,7 +261,7 @@ public interface ICalcPage {
           <li>We have a lot of buttons</li>
           <li>We have buttons for each number and for each operation as well as some basic like clear screen</li>
           <li>Whenever we press a button, something internally gets triggered and it may even change the read only display.</li>
-          <li>Lets have also functions for the action keypress.</li>
+          <li>Let's also have functions for the action keypress.</li>
         </ul>
       </section>
     </aside>
@@ -286,11 +292,10 @@ public interface ICalcPage {
     <aside class="note">
       <section>
         <ul>
-          <li>We have nbow some requirements and with tha, we can design an interface.</li>
+          <li>We have now some requirements and with that, we can design an interface.</li>
           <li>We can define the display function which returns us a double value.</li>
           <li>Returning itself is something which I do because for testcases, I like them readable and with a dot notation you can write nice one liners.</li>
         </ul>
-        <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
       </section>
     </aside>   
     <hgroup>
@@ -332,9 +337,10 @@ public <b>interface</b> ICalcPage {
         <ul>
           <li>Having the interfaces allows us to actually already implement the test cases.</li>
           <li>In the source on github, you can lookup my helper class and the config file I use.</li>
-          
+          <li><b class='red'>{Press H}</b> And thats what I meant with readable tests.</li>
+          <li>You can see what the Assert does without analyzing a big block of code.</li>
+          <li>It also hides the actual implementation and allows for wide reusing of the page objects.</li>
         </ul>
-        <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
       </section>
     </aside>
     <hgroup>
@@ -369,9 +375,11 @@ public <b>interface</b> ICalcPage {
   <aside class="note">
       <section>
         <ul>
-          <li>TODO</li>
+          <li>And here is some selenium magic which is the only part where you care about the end browser.</li>
+          <li>All you have to do is initializing the corresponding driver.</li>
+          <li><b class='red'>{Press H}</b> Afterwards, you will have only one code and can start getting your first page object.</li>
+          <li>You may notice that I use the Interface to get my actual page object and this splits the test from the implementation which also alows for severall concurent releases under regression.</li>
         </ul>
-        <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
       </section>
     </aside>
     <hgroup>
@@ -410,9 +418,11 @@ public <b>interface</b> ICalcPage {
     <aside class="note">
       <section>
         <ul>
-          <li>TODO</li>
+          <li>We need to look at the application output and find identifiers for the objects.</li>
+          <li>Whenever possible... <b class='red'>{Press H}</b> use the HTML id's as they perform the best in most browsers.... but don't expect any wonders from internet explorer.</li>
+          <li>When there are no ID's and it may even be a 3rd party product, you have still plenty of ways to get identifier</li>
+          <li>Usually it's the most timeexpensive option to use XPath but it's really powerfull if you know how to use it.</li>
         </ul>
-        <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
       </section>
     </aside>
     <hgroup>
@@ -442,9 +452,11 @@ public <b>interface</b> ICalcPage {
     <aside class="note">
       <section>
         <ul>
-          <li>TODO</li>
+          <li>This is where we will spend most maintenance and they hopefully get used in more than one test.</li>
+          <li>First, we declare the elements we need from the page as fields</li>
+          <li><b class='red'>{Press H}</b> Selenium has some annotation magic to make the connection.</li>
+          <li>Whenever the elements change, you will have to maintain the corresponding page object.</li>
         </ul>
-        <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
       </section>
     </aside>
     <hgroup>
@@ -480,9 +492,10 @@ public <b>class CalcPage implements ICalcPage</b>{
     <aside class="note">
       <section>
         <ul>
-          <li>TODO</li>
+          <li>Implementing the actions is fairly easy. <b class='red'>{Press H}</b></li>
+          <li>As example to click on a element with the mouse, just call the click method on the WebElement object.</li>
+          <li><b class='red'>{Press H}</b> Always get an abstract view of the actions goal. A login can be implemented trough setUsername() and setPassword but you can simplify the access and use login with 2 parameters.</li>
         </ul>
-        <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
       </section>
     </aside>
     <hgroup>
@@ -516,7 +529,8 @@ public class CalcPage implements ICalcPage{
     <aside class="note">
       <section>
         <ul>
-          <li>TODO</li>
+          <li>Let's take a look at how this looks in action.</li>
+          <li>First, we will execute it against HTMLUnit and a desktop browser called chrome which you may heard of before.</li>
         </ul>
       </section>
     </aside>
@@ -529,7 +543,7 @@ public class CalcPage implements ICalcPage{
     <aside class="note">
       <section>
         <ul>
-          <li>TODO</li>
+          <li>As we are at the Android Developer Days, lets also have a look at how it executes against the Android WebKit browser.</li>
         </ul>
       </section>
     </aside>
@@ -539,6 +553,14 @@ public class CalcPage implements ICalcPage{
   </slide>
 
   <slide class="thank-you-slide segue nobackground">
+    <aside class="note">
+      <section>
+        <ul>
+          <li><b>Any questions?</b></li>
+        </ul>
+      </section>
+    </aside>
+    
     <aside class="gdbar right"><img src="images/gdg_icon_128.png"></aside>
     <article class="flexbox vleft auto-fadein">
       <h2>&lt;Thank You!&gt;</h2>
