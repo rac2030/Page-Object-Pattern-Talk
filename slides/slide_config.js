@@ -4,8 +4,8 @@ var SLIDE_CONFIG = {
     title: 'Page Object Pattern',
     subtitle: 'and how to use selenium',
     eventInfo: {
-      title: 'Android Developer Days',
-      date: 'June 14/15 2013'
+      title: '',
+      date: ''
     },
     useBuilds: true, // Default: true. False will turn off slide animation builds.
     usePrettify: true, // Default: true
@@ -25,10 +25,10 @@ var SLIDE_CONFIG = {
     name: 'Michel Racic',
     company: 'GDG Zürich',
     gplus: 'http://racic.ch/+',
-    //twitter: '@rac2030',
+    twitter: '@rac2030',
     www: 'http://gdgzh.ch',
     github: 'http://github.com/rac2030',
-    slideurl: 'http://s.2030.tk/popt'
+    slideurl: 'http://rac2030.github.io/Page-Object-Pattern-Talk'
   }/*, {
     name: 'Second Name',
     company: 'Job Title, Google',
@@ -38,4 +38,3 @@ var SLIDE_CONFIG = {
     github: 'http://github.com/you'
   }*/]
 };
-
