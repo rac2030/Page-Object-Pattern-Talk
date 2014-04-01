@@ -19,4 +19,4 @@ else
   open=xdg-open
 fi
 
-$open http://localhost:$port/add13popt.html?presentme=true && python -m SimpleHTTPServer $port;
+$open http://localhost:$port/?presentme=true && python -m SimpleHTTPServer $port;
